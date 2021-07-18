@@ -1,15 +1,14 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
-</head>
-<body>
-{#{% load static %}#}
-{#<link rel="stylesheet" type="text/css" href="{% static 'MainPageStyles.css' %}">#}
-<h3>Оп</h3>
-</body>
-</html>
+
+{% extends 'MainPage/base.html' %}
+
+<link rel="stylesheet" type="text/css" href="static/css/MainPageStyles.css">
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block content %}
+    <h1>Мы на главной</h1>
+    <img src="https://sun9-76.userapi.com/impg/c855520/v855520020/1a847a/Dxg83EerXUA.jpg?size=600x509&quality=96&sign=a219f211abcb025cf54a63eae5991f73&type=album" alt="эх">
+    <h3>Псс, перейди к "про нас"</h3>
+{% endblock %}

@@ -1,13 +1,26 @@
-<!doctype html>
-<html lang="ru">
+{% extends 'MainPage/base.html' %}
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Опросы</title>
 </head>
-<body>
-<h4>Вот тут опросник будет, да</h4>
-</body>
-</html>
+
+{% block title %}
+Опросы по {{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>congrats</h1>
+    <h4>you finally got</h4>
+    <h3>and now...</h3>
+    <h1>How about to pass a poll?</h1>
+    <img src="https://99px.ru/sstorage/86/2016/04/image_862904161042052198754.gif" alt="эх">
+
+    {% for el in tasks %}
+        <div class="alert alert-warning mt-2"
+            <h3>{{ el.title }}</h3>
+            <h3>{{ el.task }}</h3>
+    {% endfor %}
+
+{#    <a class="=p2 text-dark" href="{% url 'create' %}">Добавить опрос</a>#}
+    <a class="p-2 link-secondary" href="/polls/create">Добавить опрос</a>
+{% endblock %}

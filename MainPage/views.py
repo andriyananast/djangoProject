@@ -12,3 +12,6 @@ def about(request):
 
 def polls(request):
     return render(request, 'polls/pollspage.html')
+
+# def seach(request):
+#     return render(request, 'seach/seachresult.html')
